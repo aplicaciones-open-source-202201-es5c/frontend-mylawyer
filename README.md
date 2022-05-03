@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
+## Verificar las versiones con las que vamos a trabajar
+
+- Angular material: 13.3.5
+- TypeScript: 4.6.3
+
+## Comandos para verificar las versiones instaladas que posees
+
+- Angular material: npm ls @angular/material
+- TypeScript: tsc -v
+
 ## Si no te deja instalar Angular Core
 
 - Get-ExecutionPolicy -List | Format-Table -Autosize
