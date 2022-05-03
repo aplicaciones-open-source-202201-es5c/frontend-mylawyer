@@ -2,6 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
+## Si no te deja instalar Angular Core
+
+- Get-ExecutionPolicy -List | Format-Table -Autosize
+- Set-ExecutionPolicy Unrestricted -scope process
+- Set-ExecutionPolicy Unrestricted -scope LocalMachine
+
+## Instalar las dependencias una vez clonado el repo
+
+npm install -g @angular/cli
+
+## Instalar Angular Material
+
+ng add @angular/material
+
+## Ejemplo: Instalación de componentes desde el terminal
+
+- ng generate @angular/material:dashboard salesreportdashboard
+- ng generate @angular/material:navigation salesreportnavigation
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
