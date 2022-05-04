@@ -1,0 +1,27 @@
+<section class="ItemExpansion">
+  <mat-accordion>
+
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Nombre
+        </mat-panel-title>
+        <mat-panel-description>
+          Horario
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div class="ItemExpansion__content">
+        <mat-list>
+          <mat-list-item>Item 1</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Item 2</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Item 3</mat-list-item>
+        </mat-list>
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
