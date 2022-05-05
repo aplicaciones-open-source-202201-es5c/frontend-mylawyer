@@ -1,0 +1,23 @@
+h1{
+
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mat-icon{
+  margin-right: 1rem;
+  color: #3d5afe;
+}
+
+.mat-header-cell{
+  background-color: #3d5afe;
+  font-size: 1rem;
+}
+
+.mat-cell{
+  background-color:#f3f3f6;
+}
+
+
