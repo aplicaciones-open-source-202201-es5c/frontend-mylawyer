@@ -20,6 +20,8 @@ import { ClientComponent } from './client/client.component';
 import { NotificationComponent } from './notification/notification.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { IndexComponent } from './index/index.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,8 @@ import { IndexComponent } from './index/index.component';
     MatDividerModule,
     MatProgressBarModule,
     AppRoutingModule,
+    MatCardModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
