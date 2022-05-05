@@ -10,15 +10,25 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ItemExpansionComponent } from './item-expansion/item-expansion.component';
-import {MatExpansionModule} from "@angular/material/expansion";
-import {MatDividerModule} from "@angular/material/divider";
 
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
+import { AppRoutingModule } from './app-routing.module';
+import { ClientComponent } from './client/client.component';
+import { NotificationComponent } from './notification/notification.component';
+import { AgendaComponent } from './agenda/agenda.component';
+import { IndexComponent } from './index/index.component';
 @NgModule({
   declarations: [
     AppComponent,
     MyLawyerNavigationComponent,
-    ItemExpansionComponent
+    ClientComponent,
+    ClientComponent,
+    NotificationComponent,
+    AgendaComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +39,12 @@ import {MatDividerModule} from "@angular/material/divider";
     MatIconModule,
     MatListModule,
     BrowserAnimationsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDividerModule,
+    MatProgressBarModule,
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

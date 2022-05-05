@@ -1,0 +1,20 @@
+<section class="client">
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Nombre </mat-panel-title>
+        <mat-panel-description> Horario </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div class="client__content">
+        <mat-list *ngFor="let item of list; let i = index">
+          <mat-list-item>Elemento: {{ item }}</mat-list-item>
+          <mat-divider *ngIf="i !== list.length - 1"></mat-divider>
+        </mat-list>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
