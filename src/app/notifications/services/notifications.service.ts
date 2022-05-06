@@ -30,4 +30,27 @@ export class notificationsService{
         retry(2),
         catchError(this.handleError));
   }
+  //delete notification
+  delete(id: any) {
+    return this.http.delete(`${this.basePath}/${id}`, this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError));
+  }
+  //update notification
+  update(id:any,item:any):Observable<Notification>{
+    return this.http.put<Notification>('${this.basePath}/${id}',JSON.stringify(item),this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError));
+  }
+
+  //create notification
+  create(item: any): Observable<Notification>{
+    return this.http.post<Notification>(this.basePath,JSON.stringify(item), this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      )
+  }
 }

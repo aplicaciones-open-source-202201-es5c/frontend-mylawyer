@@ -23,6 +23,8 @@ import { IndexComponent} from "./index/pages/index.component";
 import { HttpClientModule} from "@angular/common/http";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatCardModule} from "@angular/material/card";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import {MatCardModule} from "@angular/material/card";
     MatPaginatorModule,
     HttpClientModule,
     MatSlideToggleModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

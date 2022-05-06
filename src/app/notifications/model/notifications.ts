@@ -1,4 +1,4 @@
-export interface Student{
+export interface Notification{
   id: number;
   name:string;
   date:string;
