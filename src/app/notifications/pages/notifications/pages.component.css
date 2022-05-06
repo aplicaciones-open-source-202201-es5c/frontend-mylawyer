@@ -1,0 +1,31 @@
+mat-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.actions h2{
+  text-align: center;
+}
+.actions button{
+  margin-left: 1rem;
+}
+.info a{
+  text-decoration: none;
+}
+.hora, .via{
+  display: flex;
+}
+.info p{
+  padding-left: 0.5rem;
+}
+.Switch{
+  display: flex;
+
+}
+mat-slide-toggle{
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+}
+.container{
+  margin: 1rem 2rem;
+}
