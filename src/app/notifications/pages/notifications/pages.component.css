@@ -7,7 +7,7 @@ mat-card{
   text-align: center;
 }
 .actions button{
-  margin-left: 1rem;
+  margin-left: 0.9rem;
 }
 .info a{
   text-decoration: none;
@@ -20,7 +20,6 @@ mat-card{
 }
 .Switch{
   display: flex;
-
 }
 mat-slide-toggle{
   margin-left: 1rem;
