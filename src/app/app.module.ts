@@ -20,6 +20,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import { ClientsComponent } from './clients/pages/clients/clients.component';
 import { PagesComponent } from './notifications/pages/notifications/pages.component';
 import { IndexComponent} from "./index/pages/index.component";
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { IndexComponent} from "./index/pages/index.component";
     MatDividerModule,
     MatProgressBarModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
