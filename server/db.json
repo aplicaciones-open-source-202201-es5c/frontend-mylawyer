@@ -132,5 +132,27 @@
       "clientId": 5,
       "lawyerId": 3
     }
+  ],
+  "notifications": [
+    {
+      "id":1,
+      "name":"Alejandro Silva",
+      "date":"Jue 09/05/22-04:30"
+    },
+    {
+      "id":2,
+      "name":"Italo Silva",
+      "date":"Mie 02/05/22-06:30"
+    },
+    {
+      "id":3,
+      "name":"Andres Reynoso",
+      "date":"Vie 04/05/22-08:30"
+    },
+    {
+      "id":4,
+      "name":"Diego Talledo S",
+      "date":"Sab 08/05/22-02:30"
+    }
   ]
 }
