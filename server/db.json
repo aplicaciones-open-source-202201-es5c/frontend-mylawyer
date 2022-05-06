@@ -132,5 +132,12 @@
       "clientId": 5,
       "lawyerId": 3
     }
+  ],
+  "notificaciones": [
+    {
+      "id"=1,
+      "name"="Alonso Sanchez"
+      ""
+    },
   ]
 }
