@@ -41,32 +41,37 @@
       "id": 1,
       "name": "Abigail Ponce",
       "address": "Av. Universitaria 1349",
-      "age": 35
+      "age": 35,
+      "email": "Abigail.Ponce@gmail.com"
     },
     {
       "id": 2,
       "name": "Roberto Chocano",
       "address": "Av. Universitaria 1349",
-      "age": 43
+      "age": 43,
+      "email": "Roberto.Chocano@gmail.com"
     },
 
     {
       "id": 3,
       "name": "Jorge Gutierrez",
       "address": "Av. Universitaria 1349",
-      "age": 41
+      "age": 41,
+      "email": "Jorge.Gutierrez@gmail.com"
     },
     {
       "id": 4,
       "name": "Javier Castillo",
       "address": "Av. Universitaria 1349",
-      "age": 45
+      "age": 45,
+      "email": "Javier.Catillo@gmail.com"
     },
     {
       "id": 5,
       "name": "Jose Castro",
       "address": "Av. Universitaria 1349",
-      "age": 38
+      "age": 38,
+      "email": "Jose.Catro@gmail.com"
     }
 
 
