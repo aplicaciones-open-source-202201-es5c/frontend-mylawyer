@@ -1,0 +1,24 @@
+<section class="client">
+  <mat-accordion *ngFor="let item of appointmentClient">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> {{item.client.name}} </mat-panel-title>
+        <mat-panel-description class="client_date"> {{item.date}} </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div class="client__content">
+        <mat-list >
+          <mat-list-item>Nombre: {{item.client.name}} </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Email: {{item.client.email}} </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Direccion: {{item.client.address}} </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Edad: {{item.client.age}} </mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
+
