@@ -14,7 +14,7 @@ export class notificationsService{
     headers: new HttpHeaders({'content-Type':'application/json'})
   }
   constructor(private http:HttpClient) { }
-    //Error
+  //Error
   handleError(error:HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.log("Ocurrio un error: ${error.error.message}");
