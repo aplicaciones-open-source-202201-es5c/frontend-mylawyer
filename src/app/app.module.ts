@@ -25,6 +25,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import {FormsModule} from "@angular/forms";
     MatSlideToggleModule,
     MatCardModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

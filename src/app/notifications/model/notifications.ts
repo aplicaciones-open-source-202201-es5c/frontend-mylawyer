@@ -1,5 +1,6 @@
 export interface Notification{
   id: number;
-  name:string;
   date:string;
+  clientId:number;
+  lawyerId:number;
 }

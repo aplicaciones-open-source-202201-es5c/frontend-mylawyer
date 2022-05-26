@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {notificationsService} from "../../services/notifications.service";
 import {MatTableDataSource} from "@angular/material/table";
 import {Notification} from "../../model/notifications";
+import {MatPaginator} from "@angular/material/paginator";
+import {MatSort} from "@angular/material/sort";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-notification',
@@ -9,10 +12,18 @@ import {Notification} from "../../model/notifications";
   styleUrls: ['./notification.component.css']
 })
 export class NotificationComponent implements OnInit {
+
   notificationData:Notification;
   dataSource: MatTableDataSource<any>;
   displayedColumns: string[]=['notifications'];
+  disabled = false;
 
+  @ViewChild(MatPaginator,{static: true})
+  paginator!: MatPaginator;
+  @ViewChild(MatSort)
+  sort!: MatSort;
+  @ViewChild('notificationForm', {static: true})
+  appointmentForm!: NgForm;
 
   constructor(private notificationService: notificationsService) {
     this.notificationData={} as Notification;
@@ -20,13 +31,21 @@ export class NotificationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllNotifications();
+    //this.getAllNotifications();
+    this.getAllNotificationsForLawyer(3);
   }
   getAllNotifications(){
     this.notificationService.getAll().subscribe((response:any)=>{
       this.dataSource.data=response;
     });
   }
+
+  getAllNotificationsForLawyer(id:any){
+    this.notificationService.getAllForLawyer(id).subscribe((response: any) =>{
+      this.dataSource.data = response;
+    })
+  }
+
   deleteItem(id:number){
     this.notificationService.delete(id).subscribe(()=>{
       this.dataSource.data=this.dataSource.data.filter((o:Notification)=>{
@@ -35,15 +54,6 @@ export class NotificationComponent implements OnInit {
     });
     console.log(this.dataSource.data);
   }
-  updateStudent(){
-    this.notificationService.update(this.notificationData.id,this.notificationData).subscribe((response:any)=>{
-      this.dataSource.data=this.dataSource.data.map((o:Notification)=>{
-        if(o.id===response.id){
-          o=response;
-        }
-        return o;
-      })
-    })
-  }
+
 
 }

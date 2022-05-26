@@ -1,5 +1,6 @@
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
+import {Notification} from "../model/notifications";
 import {Injectable} from "@angular/core";
 
 @Injectable({
@@ -37,12 +38,13 @@ export class notificationsService{
         retry(2),
         catchError(this.handleError));
   }
-  //update notification
-  update(id:any,item:any):Observable<Notification>{
-    return this.http.put<Notification>('${this.basePath}/${id}',JSON.stringify(item),this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError));
+
+  getAllForLawyer(lawyerId:any):Observable<any>{
+    return this.http.get<any>(`${this.basePath}?lawyerId=${lawyerId}&_expand=client`, this.httpOptions).
+    pipe(
+      retry(2),
+      catchError(this.handleError)
+    );
   }
 
   //create notification
