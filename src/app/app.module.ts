@@ -26,6 +26,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import { ClientNotificationComponent } from './notifications/pages/client-notification/client-notification.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     AppointmentsComponent,
     ClientsComponent,
     IndexComponent,
-    NotificationComponent
+    NotificationComponent,
+    ClientNotificationComponent
   ],
   imports: [
     BrowserModule,

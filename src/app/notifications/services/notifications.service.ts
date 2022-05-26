@@ -47,6 +47,14 @@ export class notificationsService{
     );
   }
 
+  getAllForClient(clientId:any):Observable<any>{
+    return this.http.get<any>(`${this.basePath}?clientId=${clientId}&_expand=lawyer`, this.httpOptions).
+    pipe(
+      retry(2),
+      catchError(this.handleError)
+    );
+  }
+
   //create notification
   create(item: any): Observable<Notification>{
     return this.http.post<Notification>(this.basePath,JSON.stringify(item), this.httpOptions)
