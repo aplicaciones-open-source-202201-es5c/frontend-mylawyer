@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MyLawyerNavigationComponent } from './my-lawyer-navigation/my-lawyer-navigation.component';
+import { NotificationComponent} from "./notifications/pages/notification/notification.component";
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,7 +19,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { ClientsComponent } from './clients/pages/clients/clients.component';
-import { PagesComponent } from './notifications/pages/notifications/pages.component';
 import { IndexComponent} from "./index/pages/index.component";
 import { HttpClientModule} from "@angular/common/http";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
@@ -32,8 +32,8 @@ import {FormsModule} from "@angular/forms";
     MyLawyerNavigationComponent,
     AppointmentsComponent,
     ClientsComponent,
-    PagesComponent,
-    IndexComponent
+    IndexComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
