@@ -1,0 +1,23 @@
+<section class="lawyer">
+  <mat-accordion *ngFor="let item of lawyers">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> {{item.name}} </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="lawyer__content">
+        <mat-list >
+          <mat-list-item>Nombre: {{item.name}} </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Email: {{item.email}} </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Direccion: {{item.address}} </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Edad: {{item.age}} </mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
+

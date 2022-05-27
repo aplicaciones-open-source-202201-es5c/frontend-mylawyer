@@ -25,6 +25,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
+import { LawyersComponent } from './clients/pages/lawyers/lawyers.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {FormsModule} from "@angular/forms";
     AppointmentsComponent,
     ClientsComponent,
     IndexComponent,
-    NotificationComponent
+    NotificationComponent,
+    LawyersComponent
   ],
   imports: [
     BrowserModule,

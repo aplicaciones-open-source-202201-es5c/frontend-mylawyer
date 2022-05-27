@@ -5,6 +5,7 @@ import { AppointmentsComponent} from "./appointments/pages/appointments/appointm
 import { ClientsComponent} from "./clients/pages/clients/clients.component";
 import {NotificationComponent} from "./notifications/pages/notification/notification.component";
 import {IndexComponent} from "./index/pages/index.component";
+import {LawyersComponent} from "./clients/pages/lawyers/lawyers.component";
 
 
 const routes: Routes = [
@@ -12,7 +13,9 @@ const routes: Routes = [
   { path: 'profile', component: IndexComponent },
   { path: 'clients', component: ClientsComponent },
   { path: 'appointments', component: AppointmentsComponent },
-  { path: 'notifications', component: NotificationComponent }
+  { path: 'notifications', component: NotificationComponent },
+
+  { path: 'lawyer', component: LawyersComponent }
 
 ];
 
