@@ -33,6 +33,14 @@ export class AppointmentsService{
     );
   }
 
+  getAllForClient(clientId:any):Observable<any>{
+    return this.http.get<any>(`${this.basePath}?clientId=${clientId}&_expand=lawyer`, this.httpOptions).
+    pipe(
+      retry(2),
+      catchError(this.handleError)
+    );
+  }
+
   getAllForLawyer(lawyerId:any):Observable<any>{
     return this.http.get<any>(`${this.basePath}?lawyerId=${lawyerId}&_expand=client`, this.httpOptions).
     pipe(
