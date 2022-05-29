@@ -1,0 +1,54 @@
+.form{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.search-form{
+  width: 80%;
+}
+
+h2{
+  margin-left: 2rem;
+}
+
+.avatar{
+  position: relative;
+  float: left;
+  height: 30px;
+  width: 30px;
+  display: flex;
+}
+
+.profiles{
+  justify-content: center;
+  text-align: center;
+}
+
+.profile{
+  width:70%;
+  position: relative;
+  margin: 1rem auto 1rem auto;
+}
+.list{
+  float: right;
+  position: relative;
+  width: 50%;
+}
+
+.actions{
+  position: absolute;
+  bottom: 10px;
+}
+.action{
+  display: flex;
+}
+.img{
+  float: left;
+  position: relative;
+  margin-left: 2rem;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}

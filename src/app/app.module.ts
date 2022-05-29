@@ -18,7 +18,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { ClientsComponent } from './clients/pages/clients/clients.component';
-import { PagesComponent } from './notifications/pages/notifications/pages.component';
+import {NotificationComponent} from "./notifications/pages/notification/notification.component";
+import {ClientNotificationComponent} from "./notifications/pages/client-notification/client-notification.component";
 import { IndexComponent} from "./index/pages/index.component";
 import { HttpClientModule} from "@angular/common/http";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
@@ -26,6 +27,12 @@ import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import {SearchLawyerComponent} from "./search-lawyer/pages/search-lawyer/search-lawyer.component";
+import {OrderByPipe} from "./orderby.pipe";
+import { AppointmentsClientComponent } from './appointments/pages/appointments-client/appointments-client.component';
+import {LawyersComponent} from "./clients/pages/lawyers/lawyers.component";
+
+
 
 @NgModule({
   declarations: [
@@ -33,8 +40,13 @@ import {MatInputModule} from "@angular/material/input";
     MyLawyerNavigationComponent,
     AppointmentsComponent,
     ClientsComponent,
-    PagesComponent,
-    IndexComponent
+    NotificationComponent,
+    ClientNotificationComponent,
+    IndexComponent,
+    SearchLawyerComponent,
+    OrderByPipe,
+    AppointmentsClientComponent,
+    LawyersComponent
   ],
     imports: [
         BrowserModule,
