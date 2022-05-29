@@ -1,105 +1,63 @@
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
   <ng-container matColumnDef="notifications">
     <th mat-header-cell *matHeaderCellDef>
       <div class="Switch">
         <h1>Notificaciones</h1>
-        <mat-slide-toggle color="primary" [(ngModel)]="disabled" ></mat-slide-toggle>
+        <mat-slide-toggle color="primary" [(ngModel)]="notificationOn" ></mat-slide-toggle>
       </div>
     </th>
     <td mat-cell *matCellDef="let element">
       <mat-card>
-          <div class="info" >
-            <h2 style="padding-bottom:0">
+        <div class="info" >
+          <h2 style="padding-bottom:0">
+            <h1 *ngIf="notificationOn">
               <mat-icon>calendar_today</mat-icon>
               {{element.client.name}}
-            </h2>
-            <div class="hora">
+            </h1>
+            <h1 *ngIf="!notificationOn" style="color: darkgray" >
+              <mat-icon>calendar_today</mat-icon>
+              {{element.client.name}}
+            </h1>
+          </h2>
+          <div class="hora">
+            <div *ngIf="notificationOn">
               <mat-icon>schedule</mat-icon>
               <p>{{element.date}}</p>
             </div>
-            <div class="via">
+            <div *ngIf="!notificationOn" style="color: darkgray">
+              <mat-icon>schedule</mat-icon>
+              <p>{{element.date}}</p>
+            </div>
+          </div>
+          <div class="via">
+            <div *ngIf="notificationOn">
               <mat-icon>supervised_user_circle</mat-icon>
               <p>Videoconferencia</p>
             </div>
-            <div class="detalles">
-              <a href="">Detalles de la reunion</a>
+            <div *ngIf="!notificationOn" style="color: darkgray" >
+              <mat-icon>supervised_user_circle</mat-icon>
+              <p>Videoconferencia</p>
             </div>
 
           </div>
-          <div class="actions">
-            <h2>Sala de reunion</h2>
-            <button mat-raised-button color="primary" [disabled]="disabled" >Iniciar</button>
-            <button mat-raised-button color="accent" [disabled]="disabled"  href="javascript:void(0)" (click)="deleteItem(element.id)" >Terminar</button>
-            <button mat-raised-button color="warn" [disabled]="disabled" href="javascript:void(0)" (click)="deleteItem(element.id)" >Cancelar</button>
+          <div class="detalles">
+            <a *ngIf="notificationOn">Detalles de la reunion</a><a *ngIf="!notificationOn" style="color: darkgray" href="">Detalles de la reunion</a>
           </div>
-        </mat-card>
+
+        </div>
+        <div class="actions">
+          <h2 *ngIf="notificationOn">Sala de reunion</h2><h2 *ngIf="!notificationOn" style="color: darkgray">Sala de reunion</h2>
+          <button mat-raised-button color="primary" [disabled]="!notificationOn" >Iniciar</button>
+          <button mat-raised-button color="accent" [disabled]="!notificationOn"  href="javascript:void(0)" (click)="deleteItem(element.id)" >Terminar</button>
+          <button mat-raised-button color="warn" [disabled]="!notificationOn" href="javascript:void(0)" (click)="deleteItem(element.id)" >Cancelar</button>
+        </div>
+      </mat-card>
     </td>
   </ng-container>
-
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
-<!--mat-selection-list #shoes>
-  <mat-list-option *ngFor="let shoe of [dataSource]">
-    {{shoe.data[0].name}}
-
-  </mat-list-option>
-</mat-selection-list-->
-
-<!--mat-accordion>
-  <mat-expansion-panel hideToggle>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Notifications
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-      <ng-container matColumnDef="notifications">
-        <th mat-header-cell *matHeaderCellDef>
-          <div class="Switch">
-            <h1>Notificaciones</h1>
-          </div>
-        </th>
-        <td mat-cell *matCellDef="let element">
-          <mat-card>
-            <div class="info" >
-              <h2 style="padding-bottom:0">
-                <mat-icon>calendar_today</mat-icon>
-                {{element.client.name}}
-              </h2>
-              <div class="hora">
-                <mat-icon>schedule</mat-icon>
-                <p>{{element.date}}</p>
-              </div>
-              <div class="via">
-                <mat-icon>supervised_user_circle</mat-icon>
-                <p>Videoconferencia</p>
-              </div>
-              <div class="detalles">
-                <a href="">Detalles de la reunion</a>
-              </div>
-
-            </div>
-            <div class="actions">
-              <h2>Sala de reunion</h2>
-              <button mat-raised-button color="primary" [disabled]="disabled" >Iniciar</button>
-              <button mat-raised-button color="accent" [disabled]="disabled"  href="javascript:void(0)" (click)="deleteItem(element.id)" >Terminar</button>
-              <button mat-raised-button color="warn" [disabled]="disabled" href="javascript:void(0)" (click)="deleteItem(element.id)" >Cancelar</button>
-            </div>
-          </mat-card>
-        </td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-  </mat-expansion-panel>
-</mat-accordion-->
-
 
 
 
