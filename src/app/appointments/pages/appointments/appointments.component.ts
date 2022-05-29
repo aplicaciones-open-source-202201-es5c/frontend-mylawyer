@@ -5,6 +5,7 @@ import {AppointmentsService} from "../../services/appointments.service";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {NgForm} from "@angular/forms";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-appointments',
@@ -39,6 +40,7 @@ export class AppointmentsComponent implements OnInit {
     this.appointmentsService.getAll().subscribe((response: any) =>{
       this.dataSource.data = response;
     })
+
   }
 
   getAllAppointmentsForLawyer(id:any){

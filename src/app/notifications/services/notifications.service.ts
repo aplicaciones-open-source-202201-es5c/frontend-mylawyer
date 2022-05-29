@@ -14,7 +14,7 @@ export class notificationsService{
     headers: new HttpHeaders({'content-Type':'application/json'})
   }
   constructor(private http:HttpClient) { }
-  //Error
+    //Error
   handleError(error:HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.log("Ocurrio un error: ${error.error.message}");
@@ -39,7 +39,7 @@ export class notificationsService{
   }
   //update notification
   update(id:any,item:any):Observable<Notification>{
-    return this.http.put<Notification>('${this.basePath}/${id}',JSON.stringify(item),this.httpOptions)
+    return this.http.put<Notification>(`${this.basePath}/${id}`,JSON.stringify(item),this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
