@@ -3,5 +3,7 @@ export interface Lawyer{
   name:string,
   address:string,
   age:number
-  email:string
+  email:string,
+  points:number,
+  img:string
 }

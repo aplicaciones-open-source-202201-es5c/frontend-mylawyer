@@ -21,7 +21,7 @@ h1{
   position: relative;
   width: 50%;
 }
-.item{
+.mat-list-item{
   float: left;
   position: relative;
   margin-top: 2rem;
