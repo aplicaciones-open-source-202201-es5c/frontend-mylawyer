@@ -16,7 +16,7 @@ export class AppointmentsComponent implements OnInit {
 
   appointmentData: Appointment;
   dataSource:MatTableDataSource<any>;
-  displayedColumns: string[] = ['client', 'date', 'actions'];
+  displayedColumns: string[] = ['appointments'];
 
   @ViewChild(MatPaginator,{static: true})
   paginator!: MatPaginator;
