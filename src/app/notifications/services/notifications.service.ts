@@ -39,7 +39,7 @@ export class notificationsService{
   }
   //update notification
   update(id:any,item:any):Observable<Notification>{
-    return this.http.put<Notification>('${this.basePath}/${id}',JSON.stringify(item),this.httpOptions)
+    return this.http.put<Notification>(`${this.basePath}/${id}`,JSON.stringify(item),this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
