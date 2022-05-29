@@ -1,18 +1,16 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {Appointment} from "../../model/appointment";
 import {MatTableDataSource} from "@angular/material/table";
-import {AppointmentsService} from "../../services/appointments.service";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
-import {NgForm} from "@angular/forms";
-import {Observable} from "rxjs";
+import {AppointmentsService} from "../../services/appointments.service";
 
 @Component({
-  selector: 'app-appointments',
-  templateUrl: './appointments.component.html',
-  styleUrls: ['./appointments.component.css']
+  selector: 'app-appointments-client',
+  templateUrl: './appointments-client.component.html',
+  styleUrls: ['./appointments-client.component.css']
 })
-export class AppointmentsComponent implements OnInit {
+export class AppointmentsClientComponent implements OnInit {
 
   appointmentData: Appointment;
   dataSource:MatTableDataSource<any>;
@@ -22,8 +20,6 @@ export class AppointmentsComponent implements OnInit {
   paginator!: MatPaginator;
   @ViewChild(MatSort)
   sort!: MatSort;
-  @ViewChild('appointmentForm', {static: true})
-  appointmentForm!: NgForm;
 
   constructor(private appointmentsService: AppointmentsService) {
     this.appointmentData = {} as Appointment;
@@ -32,8 +28,7 @@ export class AppointmentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
-    //this.getAllAppointments();
-    this.getAllAppointmentsForLawyer(3);
+    this.getAllAppointmentsForClient(2);
   }
 
   getAllAppointments(){
@@ -43,8 +38,8 @@ export class AppointmentsComponent implements OnInit {
 
   }
 
-  getAllAppointmentsForLawyer(id:any){
-    this.appointmentsService.getAllForLawyer(id).subscribe((response: any) =>{
+  getAllAppointmentsForClient(id:any){
+    this.appointmentsService.getAllForClient(id).subscribe((response: any) =>{
       this.dataSource.data = response;
     })
   }
@@ -57,5 +52,6 @@ export class AppointmentsComponent implements OnInit {
     });
     console.log(this.dataSource.data);
   }
+
 
 }
