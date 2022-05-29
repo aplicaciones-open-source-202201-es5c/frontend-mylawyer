@@ -13,7 +13,7 @@ export class ClientNotificationComponent implements OnInit {
   notificationData:Notification;
   dataSource: MatTableDataSource<any>;
   displayedColumns: string[]=['notifications'];
-  disabled = false;
+  notificationOn = true;
 
   constructor(private notificationService: notificationsService) {
     this.notificationData={} as Notification;
