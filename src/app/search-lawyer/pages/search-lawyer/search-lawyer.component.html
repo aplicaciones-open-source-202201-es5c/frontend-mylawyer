@@ -1,0 +1,69 @@
+<div>
+  <form class="form">
+    <mat-form-field appearance="outline" class="search-form">
+      <span matPrefix> </span>
+      <input type="text" matInput placeholder="Search" name= "search" #searchValue>
+      <button matSuffix mat-button (click)="onTextChanged(searchValue.value)"><mat-icon >search</mat-icon></button>
+    </mat-form-field>
+  </form>
+
+  <section *ngIf="textChanged == false">
+    <h2>The highest rated</h2>
+    <mat-accordion class="profiles" *ngFor="let lawyer of lawyers.slice(0,10)| orderBy: 'points': 'desc';let i =index">
+      <mat-expansion-panel class="profile">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{i+1}}. {{lawyer.name}}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="description">
+          <img class="img" src="{{lawyer.img}}">
+          <mat-list class="list">
+            <mat-list-item class="mat-list-item">Edad: {{lawyer.age}}</mat-list-item>
+            <mat-list-item class="mat-list-item">Dirección: {{lawyer.address}}</mat-list-item>
+            <mat-list-item class="mat-list-item">Email: {{lawyer.email}}</mat-list-item>
+            <mat-list-item class="mat-list-item">Puntos: {{lawyer.points}}</mat-list-item>
+          </mat-list>
+        </div>
+        <div class="actions">
+          <button mat-icon-button class="action">
+            <mat-icon>star_border</mat-icon>
+          </button>
+          <button mat-icon-button class="action" >
+            <mat-icon>calendar_month</mat-icon>
+          </button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+  <section *ngIf="textChanged != false">
+    <h2>Results</h2>
+    <mat-accordion class="profiles" *ngFor="let lawyer of lawyers">
+      <mat-expansion-panel class="profile" *ngIf="lawyer.name.toLowerCase().includes(search)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> {{lawyer.name}}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="description">
+          <img class="img" src="{{lawyer.img}}">
+          <mat-list class="list">
+            <mat-list-item class="mat-list-item">Edad: {{lawyer.age}}</mat-list-item>
+            <mat-list-item class="mat-list-item">Dirección: {{lawyer.address}}</mat-list-item>
+            <mat-list-item class="mat-list-item">Email: {{lawyer.email}}</mat-list-item>
+            <mat-list-item class="mat-list-item">Puntos: {{lawyer.points}}</mat-list-item>
+          </mat-list>
+        </div>
+        <div class="actions">
+          <button mat-icon-button class="action">
+            <mat-icon>star_border</mat-icon>
+          </button>
+          <button mat-icon-button class="action" >
+            <mat-icon>calendar_month</mat-icon>
+          </button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+
+</div>
+
+
