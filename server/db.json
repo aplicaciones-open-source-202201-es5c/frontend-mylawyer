@@ -42,35 +42,45 @@
       "name": "Abigail Ponce",
       "address": "Av. Universitaria 1349",
       "age": 35,
-      "email": "Abigail.Ponce@gmail.com"
+      "email": "Abigail.Ponce@gmail.com",
+      "points": 3,
+      "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     },
     {
       "id": 2,
       "name": "Roberto Chocano",
       "address": "Av. Universitaria 1349",
       "age": 43,
-      "email": "Roberto.Chocano@gmail.com"
+      "email": "Roberto.Chocano@gmail.com",
+      "points": 5,
+      "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     },
     {
       "id": 3,
       "name": "Jorge Gutierrez",
       "address": "Av. Universitaria 1349",
       "age": 41,
-      "email": "Jorge.Gutierrez@gmail.com"
+      "email": "Jorge.Gutierrez@gmail.com",
+      "points": 2,
+      "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     },
     {
       "id": 4,
       "name": "Javier Castillo",
       "address": "Av. Universitaria 1349",
       "age": 45,
-      "email": "Javier.Catillo@gmail.com"
+      "email": "Javier.Catillo@gmail.com",
+      "points": 4,
+      "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     },
     {
       "id": 5,
       "name": "Jose Castro",
       "address": "Av. Universitaria 1349",
       "age": 38,
-      "email": "Jose.Catro@gmail.com"
+      "email": "Jose.Catro@gmail.com",
+      "points": 3,
+      "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     }
   ],
   "appointments": [
@@ -132,23 +142,63 @@
   "notifications": [
     {
       "id": 1,
-      "name": "Alejandro Silva",
-      "date": "Jue 09/05/22-04:30"
+      "date": "06-05-2022 17:00",
+      "clientId": 1,
+      "lawyerId": 2
     },
     {
       "id": 2,
-      "name": "Italo Silva",
-      "date": "Mie 02/05/22-06:30"
+      "date": "06-05-2022 17:00",
+      "clientId": 2,
+      "lawyerId": 2
     },
     {
       "id": 3,
-      "name": "Andres Reynoso",
-      "date": "Vie 04/05/22-08:30"
+      "date": "06-05-2022 17:00",
+      "clientId": 2,
+      "lawyerId": 3
     },
     {
       "id": 4,
-      "name": "Diego Talledo S",
-      "date": "Sab 08/05/22-02:30"
+      "date": "06-05-2022 17:00",
+      "clientId": 4,
+      "lawyerId": 5
+    },
+    {
+      "id": 5,
+      "date": "06-05-2022 17:00",
+      "clientId": 5,
+      "lawyerId": 1
+    },
+    {
+      "id": 6,
+      "date": "06-05-2022 17:00",
+      "clientId": 1,
+      "lawyerId": 3
+    },
+    {
+      "id": 7,
+      "date": "06-05-2022 17:00",
+      "clientId": 4,
+      "lawyerId": 1
+    },
+    {
+      "id": 8,
+      "date": "06-05-2022 17:00",
+      "clientId": 1,
+      "lawyerId": 4
+    },
+    {
+      "id": 9,
+      "date": "06-05-2022 17:00",
+      "clientId": 3,
+      "lawyerId": 2
+    },
+    {
+      "id": 10,
+      "date": "06-05-2022 17:00",
+      "clientId": 5,
+      "lawyerId": 3
     }
   ]
 }
