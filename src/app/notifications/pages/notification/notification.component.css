@@ -15,7 +15,7 @@ mat-card{
 .info a{
   text-decoration: none;
 }
-.hora, .via{
+.hora div, .via div{
   display: flex;
 }
 .info p{
