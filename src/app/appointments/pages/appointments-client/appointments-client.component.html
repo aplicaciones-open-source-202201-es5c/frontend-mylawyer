@@ -1,0 +1,41 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="appointments">
+    <th mat-header-cell *matHeaderCellDef>
+      <div >
+        <h1>Citas</h1>
+      </div>
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <mat-card>
+        <div class="info" >
+          <h2 style="padding-bottom:0">
+            <h1 >
+              <mat-icon>calendar_today</mat-icon>
+              {{element.lawyer.name}}
+            </h1>
+          </h2>
+          <div class="hora">
+            <mat-icon>schedule</mat-icon>
+            <p>{{element.date}}</p>
+          </div>
+          <div class="via">
+            <mat-icon>supervised_user_circle</mat-icon>
+            <p>Videoconferencia</p>
+          </div>
+          <div class="detalles">
+            <a >Detalles de la reunion</a>
+          </div>
+
+        </div>
+        <div class="actions">
+          <h2 >Sala de reunion</h2>
+          <button mat-raised-button color="primary" >Unirse</button>
+          <button mat-raised-button color="accent" href="javascript:void(0)" >Reprogramar</button>
+          <button mat-raised-button color="warn" href="javascript:void(0)" (click)="deleteItem(element.id)" >Cancelar</button>
+        </div>
+      </mat-card>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
