@@ -5,35 +5,40 @@
       "name": "Alejandro Silva",
       "address": "Av. Universitaria 1349",
       "age": 18,
-      "email": "Alejandro.Silva@gmail.com"
+      "email": "Alejandro.Silva@gmail.com",
+      "password": "alejandro123"
     },
     {
       "id": 2,
       "name": "Italo Silva",
       "address": "Av. Universitaria 1349",
       "age": 21,
-      "email": "Italo.Silva@gmail.com"
+      "email": "Italo.Silva@gmail.com",
+      "password": "italo123"
     },
     {
       "id": 3,
       "name": "Andres Reynoso",
       "address": "Av. Universitaria 1349",
       "age": 25,
-      "email": "Andres.Reynoso@gmail.com"
+      "email": "Andres.Reynoso@gmail.com",
+      "password": "andres123"
     },
     {
       "id": 4,
       "name": "Diego Talledo Silva",
       "address": "Av. Universitaria 1349",
       "age": 32,
-      "email": "Diego.Talledo.Silva@gmail.com"
+      "email": "Diego.Talledo.Silva@gmail.com",
+      "password": "diego123"
     },
     {
       "id": 5,
       "name": "Juan Perez",
       "address": "Av. Universitaria 1349",
       "age": 22,
-      "email": "Juan.Perez@gmail.com"
+      "email": "Juan.Perez@gmail.com",
+      "password": "juan123"
     }
   ],
   "lawyers": [
@@ -43,6 +48,7 @@
       "address": "Av. Universitaria 1349",
       "age": 35,
       "email": "Abigail.Ponce@gmail.com",
+      "password": "abigail123",
       "points": 3,
       "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     },
@@ -52,6 +58,7 @@
       "address": "Av. Universitaria 1349",
       "age": 43,
       "email": "Roberto.Chocano@gmail.com",
+      "password": "roberto123",
       "points": 5,
       "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     },
@@ -61,6 +68,7 @@
       "address": "Av. Universitaria 1349",
       "age": 41,
       "email": "Jorge.Gutierrez@gmail.com",
+      "password": "jorge123",
       "points": 2,
       "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     },
@@ -70,6 +78,7 @@
       "address": "Av. Universitaria 1349",
       "age": 45,
       "email": "Javier.Catillo@gmail.com",
+      "password": "javier123",
       "points": 4,
       "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     },
@@ -79,6 +88,7 @@
       "address": "Av. Universitaria 1349",
       "age": 38,
       "email": "Jose.Catro@gmail.com",
+      "password": "jose123",
       "points": 3,
       "img": "https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"
     }
@@ -199,6 +209,35 @@
       "date": "06-05-2022 17:00",
       "clientId": 5,
       "lawyerId": 3
+    }
+  ],
+  "users": [
+    {
+      "name": "Diego Talledo",
+      "address": "Av. Universitaria 1349",
+      "age": 18,
+      "email": "diego@gmail.com",
+      "password": "diego123",
+      "lawyer": true,
+      "id": 1
+    },
+    {
+      "email": "cliente@gmail.com",
+      "password": "$2a$10$dVG6bonJxAvyJ8EX9/zUQ.ZUjk.oCMaj.ceQ6qP9EezUUnnPM4LDe",
+      "name": "Diego Talledo",
+      "address": "Av. Universitaria 1349",
+      "age": 18,
+      "lawyer": false,
+      "id": 2
+    },
+    {
+      "email": "abogado@gmail.com",
+      "password": "$2a$10$t8ajS7QpSEovSiSXGE5f4eqd3E7Q5eXRGrVgysgM13hHkZICw9CI2",
+      "name": "Diego Sanchez",
+      "address": "Av. Universitaria 1349",
+      "age": 28,
+      "lawyer": true,
+      "id": 3
     }
   ]
 }

@@ -9,10 +9,12 @@ import {ClientNotificationComponent} from "./notifications/pages/client-notifica
 import {SearchLawyerComponent} from "./search-lawyer/pages/search-lawyer/search-lawyer.component";
 import {AppointmentsClientComponent} from "./appointments/pages/appointments-client/appointments-client.component";
 import {LawyersComponent} from "./clients/pages/lawyers/lawyers.component";
+import {SignInComponent} from "./security/pages/sign-in/sign-in.component";
+import {SignUpComponent} from "./security/pages/sign-up/sign-up.component";
 
 
 const routes: Routes = [
-  { path: '', component: IndexComponent },
+  { path: '', component: SignInComponent },
   { path: 'profile', component: IndexComponent },
   { path: 'clients', component: ClientsComponent },
   { path: 'lawyers', component: LawyersComponent },
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'appointmentsClient', component: AppointmentsClientComponent },
   { path: 'notifications', component: NotificationComponent },
   { path: 'notificationsC', component: ClientNotificationComponent },
+  { path: 'signIn', component:SignInComponent},
+  { path: 'signUp', component:SignUpComponent},
   { path: 'searchlawyer', component:SearchLawyerComponent}
 ];
 

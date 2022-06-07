@@ -1,1 +1,60 @@
-<p>sign-in works!</p>
+<div class="container">
+  <div class="text">
+    <h1><b>MyLawyer</b></h1>
+    <p>MyLawyer te ayuda a comunicarte <br> con los abogados que necesites.</p>
+  </div>
+  <div class="login">
+    <mat-card>
+      <mat-card-title>Iniciar sesion</mat-card-title>
+      <form [formGroup]="signInForm">
+        <div>
+          <mat-grid-list cols="1" rowHeight="50px" >
+            <mat-grid-tile>
+              <mat-form-field appearance="outline" >
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  placeholder="Correo Electronico"
+                  formControlName="email"
+                  required
+                >
+                <div *ngIf="email.invalid && (email.dirty || email!.touched)">
+                  <mat-error *ngIf="email.errors?.['email']"
+                  >You must enter a valid email.</mat-error>
+                  <mat-error *ngIf="email.errors?.['required']"
+                  >email required.</mat-error>
+                </div>
+              </mat-form-field>
+
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field appearance="outline" >
+                <mat-label>Password</mat-label>
+                <input
+                  type="password"
+                  matInput
+                  placeholder="contraseña"
+                  formControlName="password"
+                  required
+                >
+                <mat-error *ngIf="password.errors?.['minlength']"
+                >Password must be at least 6 characters length.</mat-error>
+                <mat-error *ngIf="password.errors?.['required']"
+                >email required.</mat-error>
+
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <mat-card-actions>
+          <button mat-raised-button color="primary"(click)="signIn()" >Iniciar sesion</button>
+          <a href="#">¿Olvidaste tu contraseña?</a>
+          <mat-divider></mat-divider>
+          <button mat-raised-button [routerLink]="'/signUp'">Crear cuenta nueva</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>
+</div>
+
+
