@@ -1,0 +1,4 @@
+{
+  "/api/v1/*": "/$1",
+  "/student/:studentId/skills": "competence?studentId=:studentId&_expand=skill"
+}
