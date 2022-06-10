@@ -4,18 +4,17 @@
   <form [formGroup]="signUpForm">
     <div>
       <div class="field_name">
-        <mat-label>Nombre: </mat-label>
+        <mat-label>Nombre </mat-label>
         <mat-form-field style="display: block" appearance="outline">
           <mat-label>Ingrese su nombre completo</mat-label>
-          <input matInput
-                 required>
+          <input formControlName="name" matInput required>
         </mat-form-field>
       </div>
       <div class="field_email">
         <mat-label>Correo Electronico</mat-label>
         <mat-form-field appearance="outline" >
           <mat-label>Email</mat-label>
-          <input
+          <input formControlName="email"
             matInput
             placeholder="Correo Electronico"
             formControlName="email"
@@ -32,25 +31,24 @@
         <mat-label>Ingresa tu edad</mat-label>
         <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Ingresa tu edad</mat-label>
-          <input matInput>
+          <input formControlName="age" matInput>
         </mat-form-field>
       </div>
       <div class="field_address">
         <mat-label>Direccion</mat-label>
         <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Ingrese su direccion</mat-label>
-          <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+          <textarea formControlName="address" matInput placeholder="Ex. 100 Main St"></textarea>
         </mat-form-field>
       </div>
       <div class="field_password">
         <mat-label>Password</mat-label>
         <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Ingrese su contraseña</mat-label>
-          <input
+          <input formControlName="password"
             type="password"
             matInput
             placeholder="contraseña"
-            formControlName="password"
             required
           >
         </mat-form-field>
@@ -61,10 +59,14 @@
           <button class="buttonOption" mat-raised-button (click)="userTypeViewer(false)">Cliente</button>
           <button class="buttonOption" mat-raised-button (click)="userTypeViewer(true)">Abogado</button>
         </div>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input formControlName="lawyer=" placeholder="{{usuario}}" matInput>
+        </mat-form-field>
+
       </div>
     </div>
     <mat-card-actions>
-      <button mat-raised-button color="primary" >Registrarse</button>
+      <button mat-raised-button color="primary" (click)="signUp()">Registrarse</button>
       <a href="/signIn">Tienes una cuenta?</a>
     </mat-card-actions>
   </form>

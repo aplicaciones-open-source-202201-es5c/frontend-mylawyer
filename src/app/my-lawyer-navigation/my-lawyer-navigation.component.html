@@ -20,14 +20,16 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
+      <div *ngIf="getCurrentUserEmail()">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
         >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </div>
       <span>My Lawyer</span>
       <span class="example-spacer"></span>
       <mat-divider [vertical]="true" [inset]="true"></mat-divider>

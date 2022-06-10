@@ -238,6 +238,24 @@
       "age": 28,
       "lawyer": true,
       "id": 3
+    },
+    {
+      "email": "alonso@gmail.com",
+      "password": "$2a$10$d8K10bkm2rqthSOgzblzUO5Qf/9qInDfOEhAjk2NH6ISeGry.iXp.",
+      "name": "alonso",
+      "address": "Luis Falcon",
+      "age": "19",
+      "lawyer": "",
+      "id": 4
+    },
+    {
+      "email": "diegotasa35@hotmail.com",
+      "password": "$2a$10$hkFjFjOhXub6ABq9Cax/Ve/kek2Gv4Os1s/NJ0YCqyrdKcVPff4kS",
+      "name": "aja",
+      "address": "Luis Falcon",
+      "age": "78",
+      "lawyer": "",
+      "id": 5
     }
   ]
 }
