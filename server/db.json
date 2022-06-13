@@ -222,40 +222,22 @@
       "id": 1
     },
     {
-      "email": "cliente@gmail.com",
-      "password": "$2a$10$dVG6bonJxAvyJ8EX9/zUQ.ZUjk.oCMaj.ceQ6qP9EezUUnnPM4LDe",
-      "name": "Diego Talledo",
-      "address": "Av. Universitaria 1349",
-      "age": 18,
-      "lawyer": false,
-      "id": 2
-    },
-    {
       "email": "abogado@gmail.com",
-      "password": "$2a$10$t8ajS7QpSEovSiSXGE5f4eqd3E7Q5eXRGrVgysgM13hHkZICw9CI2",
-      "name": "Diego Sanchez",
+      "password": "$2a$10$uOSMhJtStBbyRBHhvPMY8OJnIAXRE5j8ehl2qduHWbWbDEigPm4kO",
+      "name": "Roberto Chocano",
       "address": "Av. Universitaria 1349",
       "age": 28,
       "lawyer": true,
+      "id": 2
+    },
+    {
+      "email": "cliente@gmail.com",
+      "password": "$2a$10$bkpKumUZKzHrz4QvYeRykeDps2DouBe/vXziMzw6SJqqCHknks5Ze",
+      "name": "Diego Talledo",
+      "address": "Av. Universitaria 1349",
+      "age": 28,
+      "lawyer": false,
       "id": 3
-    },
-    {
-      "email": "alonso@gmail.com",
-      "password": "$2a$10$d8K10bkm2rqthSOgzblzUO5Qf/9qInDfOEhAjk2NH6ISeGry.iXp.",
-      "name": "alonso",
-      "address": "Luis Falcon",
-      "age": "19",
-      "lawyer": "",
-      "id": 4
-    },
-    {
-      "email": "diegotasa35@hotmail.com",
-      "password": "$2a$10$hkFjFjOhXub6ABq9Cax/Ve/kek2Gv4Os1s/NJ0YCqyrdKcVPff4kS",
-      "name": "aja",
-      "address": "Luis Falcon",
-      "age": "78",
-      "lawyer": "",
-      "id": 5
     }
   ]
 }
