@@ -2,13 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
-## Frontend desplegado TB3
+## Frontend desplegado TB4
 
-https://deploy-my-lawyer-cloud.web.app/
+https://my-lawyer-v6.web.app/
 
-## Json Server desplegado TB3
+## Json Server desplegado TB4
 
-https://my-json-server.typicode.com/DiegoTS18/datosMyLawyer/
+https://my-json-server.typicode.com/DiegoTS18/datos
 
 ## Video para deployarlo
 
