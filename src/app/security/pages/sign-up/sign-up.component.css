@@ -1,0 +1,43 @@
+.container{
+ display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+mat-card{
+  width: 700px;
+  padding: 0 3rem;
+  padding-top: 3rem;
+}
+mat-card-title{
+  text-align: center;
+}
+mat-form-field{
+  width: 100%;
+}
+.field_type mat-label{
+  display: block;
+}
+.options{
+  display: flex;
+  justify-content: space-evenly;
+}
+button:active{
+  background-color: blue;
+}
+mat-card-actions button{
+  display: block;
+  margin: 1.5rem 0;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 20px;
+}
+mat-card-actions a{
+  text-decoration: none;
+  display: block ;
+  font-size: 15.3px;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+.field_type mat-form-field{
+  display: none;
+}

@@ -1,0 +1,45 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav"
+      >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="/profile">Mi perfil</a>
+      <div *ngIf="getCurrentUserType()===true;else lawyer">
+        <a mat-list-item href="/appointmentsLawyer">Mi agenda Abogado</a>
+        <a mat-list-item href="/clients">Mis clientes</a>
+        <a mat-list-item href="/notifications">Notificaciones Abogado</a>
+      </div>
+      <ng-template #lawyer>
+        <a mat-list-item href="/appointmentsClient">Mi agenda Cliente</a>
+        <a mat-list-item href="/lawyers">Mis abogados</a>
+        <a mat-list-item href="/notificationsC">Notificaciones Cliente</a>
+        <a mat-list-item href="/searchlawyer">Buscar Abogado</a>
+      </ng-template>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div *ngIf="getCurrentUserEmail()">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </div>
+      <span>My Lawyer</span>
+      <span class="example-spacer"></span>
+      <mat-divider [vertical]="true" [inset]="true"></mat-divider>
+
+
+      <div *ngIf="getCurrentUserEmail()">
+        <a mat-button href="/profile">Hola {{getCurrentUserName()}} !</a>
+        <a mat-button (click)="signOut()">Cerrar Sesion</a>
+      </div>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

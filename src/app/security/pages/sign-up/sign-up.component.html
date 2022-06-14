@@ -1,0 +1,77 @@
+<div class="container">
+<mat-card>
+  <mat-card-title>Registrate ahora!</mat-card-title>
+  <form [formGroup]="signUpForm">
+    <div>
+      <div class="field_name">
+        <mat-label>Nombre </mat-label>
+        <mat-form-field style="display: block" appearance="outline">
+          <mat-label>Ingrese su nombre completo</mat-label>
+          <input formControlName="name" matInput required>
+        </mat-form-field>
+      </div>
+      <div class="field_email">
+        <mat-label>Correo Electronico</mat-label>
+        <mat-form-field appearance="outline" >
+          <mat-label>Email</mat-label>
+          <input formControlName="email"
+            matInput
+            placeholder="Correo Electronico"
+            formControlName="email"
+            required>
+          <div *ngIf="email.invalid && (email.dirty || email!.touched)">
+            <mat-error *ngIf="email.errors?.['email']"
+            >You must enter a valid email.</mat-error>
+            <mat-error *ngIf="email.errors?.['required']"
+            >email required.</mat-error>
+          </div>
+        </mat-form-field>
+      </div>
+      <div class="field_age">
+        <mat-label>Ingresa tu edad</mat-label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Ingresa tu edad</mat-label>
+          <input formControlName="age" matInput>
+        </mat-form-field>
+      </div>
+      <div class="field_address">
+        <mat-label>Direccion</mat-label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Ingrese su direccion</mat-label>
+          <textarea formControlName="address" matInput placeholder="Ex. 100 Main St"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="field_password">
+        <mat-label>Password</mat-label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Ingrese su contraseña</mat-label>
+          <input formControlName="password"
+            type="password"
+            matInput
+            placeholder="contraseña"
+            required
+          >
+        </mat-form-field>
+      </div>
+      <div class="field_type">
+        <mat-label>Tipo de usuario: {{usuario}}</mat-label>
+        <div class="options">
+          <button class="buttonOption" mat-raised-button (click)="userTypeViewer(false)">Cliente</button>
+          <button class="buttonOption" mat-raised-button (click)="userTypeViewer(true)">Abogado</button>
+        </div>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input formControlName="lawyer=" placeholder="{{usuario}}" matInput>
+        </mat-form-field>
+
+      </div>
+    </div>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="signUp()">Registrarse</button>
+      <a href="/signIn">Tienes una cuenta?</a>
+    </mat-card-actions>
+  </form>
+
+</mat-card>
+</div>
+
+

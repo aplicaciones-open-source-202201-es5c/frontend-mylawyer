@@ -1,0 +1,39 @@
+h1{
+
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.fieldName{
+  width:5rem;
+  position: relative;
+  float: left;
+}
+.field{
+  margin-left: 1rem;
+  width: 30rem;
+}
+
+.list{
+  float: right;
+  position: relative;
+  width: 50%;
+}
+.mat-list-item{
+  float: left;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+img{
+  float:left;
+  position: relative;
+  margin-left: 2rem;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
