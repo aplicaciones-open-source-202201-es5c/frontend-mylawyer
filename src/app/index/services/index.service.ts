@@ -9,6 +9,7 @@ import {Lawyer} from "../model/lawyer";
 export class IndexService {
   basePath = 'https://my-json-server.typicode.com/DiegoTS18/datosMyLawyer/lawyers';
 
+
   httpOptions = {
     headers: new HttpHeaders({'Content-Type':'application/json'})
   }
