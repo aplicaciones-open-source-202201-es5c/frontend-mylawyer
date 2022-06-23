@@ -9,11 +9,12 @@ import {HttpClient} from "@angular/common/http";
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent implements OnInit{
+export class SignUpComponent{
   signUpForm: FormGroup;
   optionselected: boolean;
   lawyer: boolean;
   usuario: string;
+  //aca debo de darle el valor
 
 
 
@@ -25,15 +26,13 @@ export class SignUpComponent implements OnInit{
       name:[''],
       address:[''],
       age:[''],
-      lawyer:[''],
+      lawyer:[true],// o pasarlo por el input
       email: ['', [Validators.email, Validators.required]],
       password: ['', [Validators.email, Validators.minLength(6)]],
     });
     this.optionselected=false;
     this.lawyer= false;
     this.usuario="";
-  }
-  ngOnInit() {
   }
 
   get email(){

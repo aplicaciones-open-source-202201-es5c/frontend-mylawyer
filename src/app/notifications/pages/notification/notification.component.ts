@@ -16,7 +16,7 @@ export class NotificationComponent implements OnInit {
   notificationData:Notification;
   dataSource: MatTableDataSource<any>;
   displayedColumns: string[]=['notifications'];
-  notificationOn = true;
+  notificationOn = false;
 
   @ViewChild(MatPaginator,{static: true})
   paginator!: MatPaginator;
