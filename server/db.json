@@ -238,6 +238,15 @@
       "age": 28,
       "lawyer": false,
       "id": 3
+    },
+    {
+      "email": "aaaaaaaaaaaaaaaaaaaaa@gmail.com",
+      "password": "$2a$10$h3rHIFL9lql4OBShGbsNBunuxZlEJQ/raJNNsAopAMu5henNxEt7e",
+      "name": "aaaaaaaa",
+      "address": "aaaaaaaaaaaaa",
+      "age": 48,
+      "lawyer": true,
+      "id": 4
     }
   ]
 }

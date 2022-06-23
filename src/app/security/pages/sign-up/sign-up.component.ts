@@ -23,12 +23,12 @@ export class SignUpComponent{
               public router: Router,
               private http: HttpClient   ) {
     this.signUpForm = this.builder.group({
-      name:[''],
-      address:[''],
-      age:[''],
-      lawyer:[true],// o pasarlo por el input
+      name:['', Validators.required],
+      address:['', Validators.required],
+      age:['', Validators.required],
+      lawyer:[true, Validators.required],// o pasarlo por el input
       email: ['', [Validators.email, Validators.required]],
-      password: ['', [Validators.email, Validators.minLength(6)]],
+      password: ['', [Validators.minLength(6)]],
     });
     this.optionselected=false;
     this.lawyer= false;
@@ -37,6 +37,12 @@ export class SignUpComponent{
 
   get email(){
     return this.signUpForm.controls['email'];
+  }
+  get age(){
+    return this.signUpForm.controls['age'];
+  }
+  get address(){
+    return this.signUpForm.controls['address'];
   }
   get password(){
     return this.signUpForm.controls['password'];
