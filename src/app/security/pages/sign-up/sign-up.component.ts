@@ -4,6 +4,7 @@ import {SignService} from "../../services/sign.service";
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -14,19 +15,18 @@ export class SignUpComponent{
   optionselected: boolean;
   lawyer: boolean;
   usuario: string;
-  //aca debo de darle el valor
-
 
 
   constructor(public builder: FormBuilder,
               public authService: SignService,
               public router: Router,
-              private http: HttpClient   ) {
+              private http: HttpClient   )
+  {
     this.signUpForm = this.builder.group({
       name:['', Validators.required],
       address:['', Validators.required],
       age:['', Validators.required],
-      lawyer:[true, Validators.required],// o pasarlo por el input
+      role:['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
       password: ['', [Validators.minLength(6)]],
     });
@@ -34,6 +34,7 @@ export class SignUpComponent{
     this.lawyer= false;
     this.usuario="";
   }
+
 
   get email(){
     return this.signUpForm.controls['email'];
@@ -59,11 +60,11 @@ export class SignUpComponent{
     this.lawyer=Usertype;
     if(this.optionselected===true&&this.lawyer===true){
       alert("Eligiste Abogado")
-      this.usuario="abogado";
+      this.usuario="lawyer";
     }
     else{
       alert("Eligiste cliente")
-      this.usuario="cliente";
+      this.usuario="client";
     }
   }
 

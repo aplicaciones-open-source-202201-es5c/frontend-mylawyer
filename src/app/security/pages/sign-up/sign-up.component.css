@@ -39,5 +39,5 @@ mat-card-actions a{
   margin-bottom: 0.6rem;
 }
 .field_type mat-form-field{
-  display: none;
+  /*display: none;*/
 }

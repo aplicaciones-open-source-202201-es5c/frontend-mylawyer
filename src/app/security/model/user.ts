@@ -4,7 +4,7 @@ export interface User{
   age:number;
   id:number;
   email:string;
-  lawyer:boolean;
+  role:string;
   password:string;
 
 }

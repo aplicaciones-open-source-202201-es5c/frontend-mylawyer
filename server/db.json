@@ -218,7 +218,7 @@
       "age": 18,
       "email": "diego@gmail.com",
       "password": "diego123",
-      "lawyer": true,
+      "role": "lawyer",
       "id": 1
     },
     {
@@ -227,7 +227,7 @@
       "name": "Roberto Chocano",
       "address": "Av. Universitaria 1349",
       "age": 28,
-      "lawyer": true,
+      "role": "lawyer",
       "id": 2
     },
     {
@@ -236,17 +236,8 @@
       "name": "Diego Talledo",
       "address": "Av. Universitaria 1349",
       "age": 28,
-      "lawyer": false,
+      "role": "client",
       "id": 3
-    },
-    {
-      "email": "aaaaaaaaaaaaaaaaaaaaa@gmail.com",
-      "password": "$2a$10$h3rHIFL9lql4OBShGbsNBunuxZlEJQ/raJNNsAopAMu5henNxEt7e",
-      "name": "aaaaaaaa",
-      "address": "aaaaaaaaaaaaa",
-      "age": 48,
-      "lawyer": true,
-      "id": 4
     }
   ]
 }

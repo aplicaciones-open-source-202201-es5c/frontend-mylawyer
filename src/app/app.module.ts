@@ -34,6 +34,7 @@ import {LawyersComponent} from "./clients/pages/lawyers/lawyers.component";
 import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -53,30 +54,31 @@ import {MatGridListModule} from "@angular/material/grid-list";
     SignInComponent,
     SignUpComponent
   ],
-  imports: [
-    BrowserModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    MatExpansionModule,
-    MatDividerModule,
-    MatProgressBarModule,
-    MatTableModule,
-    MatPaginatorModule,
-    HttpClientModule,
-    MatSlideToggleModule,
-    MatCardModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatInputModule,
-    MatGridListModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        MatExpansionModule,
+        MatDividerModule,
+        MatProgressBarModule,
+        MatTableModule,
+        MatPaginatorModule,
+        HttpClientModule,
+        MatSlideToggleModule,
+        MatCardModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatInputModule,
+        MatGridListModule,
+        ReactiveFormsModule,
+        MatSelectModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

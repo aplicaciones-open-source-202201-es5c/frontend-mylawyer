@@ -65,13 +65,13 @@ export class IndexComponent implements OnInit {
       return currentUser.address;
     }else return null;
   }
-  getCurrentUserRoll() {
+  getCurrentUserRole() {
     let userRoll: string;
     let currentUserString=localStorage.getItem('currentUser');
     if(currentUserString){
       console.log(`current user: ${currentUserString}`);
       let currentUser=(JSON.parse(currentUserString));
-      if(currentUser.lawyer===true){userRoll="abogado"}else {userRoll="cliente"}
+      if(currentUser.role==="lawyer"){userRoll="abogado"}else {userRoll="cliente"}
       return userRoll;
     }else return null;
   }

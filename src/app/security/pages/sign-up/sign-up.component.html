@@ -54,13 +54,13 @@
         </mat-form-field>
       </div>
       <div class="field_type">
-        <mat-label>Tipo de usuario: {{usuario}}</mat-label>
+        <mat-label>Tipo de usuario: {{usuario}} </mat-label>
         <div class="options">
           <button class="buttonOption" mat-raised-button (click)="userTypeViewer(false)">Cliente</button>
           <button class="buttonOption" mat-raised-button (click)="userTypeViewer(true)">Abogado</button>
         </div>
-        <mat-form-field class="example-full-width" appearance="outline">
-          <input formControlName="lawyer=" placeholder="{{usuario}}" matInput>
+        <mat-form-field style="display: block" appearance="outline">
+          <input formControlName="role" type="string" value="{{usuario}}" matInput>
         </mat-form-field>
 
       </div>

@@ -26,11 +26,11 @@ export class MyLawyerNavigationComponent {
       return currentUser.email;
     }else return null;
   }
-  getCurrentUserType() {
+  getCurrentUserRole() {
     let currentUsertype=localStorage.getItem('currentUser');
     if(currentUsertype){
       let currentUser=(JSON.parse(currentUsertype));
-      return currentUser.lawyer
+      if (currentUser.role==="lawyer"){return true}else {return false}
     }else return null;
   }
   getCurrentUserName() {
