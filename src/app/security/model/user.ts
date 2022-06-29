@@ -4,6 +4,7 @@ export interface User{
   age:number;
   id:number;
   email:string;
+  username:string;
   role:string;
   password:string;
 

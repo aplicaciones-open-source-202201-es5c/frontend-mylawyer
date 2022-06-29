@@ -27,6 +27,16 @@
           </div>
         </mat-form-field>
       </div>
+      <div class="field_username">
+        <mat-label>Nombre de usuario</mat-label>
+        <mat-form-field appearance="outline" >
+          <mat-label>Email</mat-label>
+          <input matInput
+                 placeholder="usuario"
+                 formControlName="username"
+                 required>
+        </mat-form-field>
+      </div>
       <div class="field_age">
         <mat-label>Ingresa tu edad</mat-label>
         <mat-form-field class="example-full-width" appearance="outline">
@@ -54,13 +64,10 @@
         </mat-form-field>
       </div>
       <div class="field_type">
-        <mat-label>Tipo de usuario: {{usuario}} </mat-label>
-        <div class="options">
-          <button class="buttonOption" mat-raised-button (click)="userTypeViewer(false)">Cliente</button>
-          <button class="buttonOption" mat-raised-button (click)="userTypeViewer(true)">Abogado</button>
-        </div>
+        <mat-label>Tipo de usuario: </mat-label>
+        <mat-label>Ingrese "lawyer" para abogado o "client" para cliente </mat-label>
         <mat-form-field style="display: block" appearance="outline">
-          <input formControlName="role" type="string" value="{{usuario}}" matInput>
+          <input formControlName="role" type="string" matInput>
         </mat-form-field>
 
       </div>

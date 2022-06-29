@@ -25,6 +25,7 @@ export class SignUpComponent{
     this.signUpForm = this.builder.group({
       name:['', Validators.required],
       address:['', Validators.required],
+      username:['', Validators.required],
       age:['', Validators.required],
       role:['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
@@ -39,12 +40,6 @@ export class SignUpComponent{
   get email(){
     return this.signUpForm.controls['email'];
   }
-  get age(){
-    return this.signUpForm.controls['age'];
-  }
-  get address(){
-    return this.signUpForm.controls['address'];
-  }
   get password(){
     return this.signUpForm.controls['password'];
   }
@@ -54,18 +49,6 @@ export class SignUpComponent{
         this.signUpForm.reset();
         this.router.navigate(['signIn'])
       })
-  }
-  userTypeViewer(Usertype :boolean){
-    this.optionselected=true;
-    this.lawyer=Usertype;
-    if(this.optionselected===true&&this.lawyer===true){
-      alert("Eligiste Abogado")
-      this.usuario="lawyer";
-    }
-    else{
-      alert("Eligiste cliente")
-      this.usuario="client";
-    }
   }
 
 
