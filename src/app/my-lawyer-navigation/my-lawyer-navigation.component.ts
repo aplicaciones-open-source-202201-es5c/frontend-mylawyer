@@ -3,6 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import {Router} from "@angular/router";
+import {MatTableDataSource} from "@angular/material/table";
+
 
 @Component({
   selector: 'app-my-lawyer-navigation',
@@ -10,7 +12,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./my-lawyer-navigation.component.css']
 })
 export class MyLawyerNavigationComponent {
-
+  notifications=[]
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -18,6 +20,20 @@ export class MyLawyerNavigationComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver,private route: Router) {}
+    /*{
+    this.notificationService.getAllForClient(this.getCurrentUserID()).subscribe((response: any) =>{
+      this.notifications = response;
+    })
+    return this.notifications.length
+  }*/
+  getCurrentUserID() {
+    let currentUserString=localStorage.getItem('currentUser');
+    if(currentUserString){
+      console.log(`current user: ${currentUserString}`);
+      let currentUser=(JSON.parse(currentUserString));
+      return currentUser.id;
+    }else return null;
+  }
   getCurrentUserEmail() {
     let currentUserString=localStorage.getItem('currentUser');
     if(currentUserString){
