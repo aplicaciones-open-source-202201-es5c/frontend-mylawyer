@@ -56,5 +56,12 @@ export class AppointmentsService{
         catchError(this.handleError)
       );
   }
+  
+  update(id:any,item:any):Observable<any>{
+    return this.http.put<any>(`${this.basePath}/${id}`,JSON.stringify(item),this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError));
+  }
 
 }

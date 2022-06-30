@@ -35,6 +35,13 @@ import { SignInComponent } from './security/pages/sign-in/sign-in.component';
 import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatSelectModule} from "@angular/material/select";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { DialogReprogramComponent } from './appointments/pages/dialog-reprogram/dialog-reprogram.component';
+import { DialogCallComponent } from './appointments/pages/dialog-call/dialog-call.component';
+import {MatBadgeModule} from "@angular/material/badge";
 
 
 
@@ -52,7 +59,9 @@ import {MatSelectModule} from "@angular/material/select";
     AppointmentsClientComponent,
     LawyersComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    DialogReprogramComponent,
+    DialogCallComponent
   ],
     imports: [
         BrowserModule,
@@ -77,7 +86,12 @@ import {MatSelectModule} from "@angular/material/select";
         MatInputModule,
         MatGridListModule,
         ReactiveFormsModule,
-        MatSelectModule
+        MatSelectModule,
+        MatDialogModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatCheckboxModule,
+        MatBadgeModule
     ],
   providers: [],
   bootstrap: [AppComponent]
