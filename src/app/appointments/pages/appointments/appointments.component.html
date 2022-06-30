@@ -30,7 +30,7 @@
         </div>
         <div class="actions">
           <h2 >Sala de reunion</h2>
-          <button mat-raised-button color="primary" >Unirse</button>
+          <button mat-raised-button color="primary" (click)="joinCall()">Unirse</button>
           <button mat-raised-button color="warn" href="javascript:void(0)" (click)="deleteItem(element.id)" >Cancelar</button>
         </div>
       </mat-card>
