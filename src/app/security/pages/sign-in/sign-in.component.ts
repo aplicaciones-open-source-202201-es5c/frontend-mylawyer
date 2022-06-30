@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {SignService} from "../../services/sign.service";
 import {Router} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-sign-in',
@@ -21,9 +22,6 @@ export class SignInComponent {
     });
   }
 
-  get email(){
-    return this.signInForm.controls['email'];
-  }
   get password(){
     return this.signInForm.controls['password'];
   }
@@ -36,6 +34,6 @@ export class SignInComponent {
       console.log(`accessToken: ${localStorage.getItem('accessToken')}`);
       this.router.navigate(['profile']).then();
     })
-
   }
+
 }

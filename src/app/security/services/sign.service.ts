@@ -7,7 +7,7 @@ import {catchError, retry, throwError} from "rxjs";
   providedIn: 'root'
 })
 export class SignService {
-  basePath: String='http://localhost:3000/api/v1/auth'
+  basePath: String='http://localhost:8080/api/v1/users/auth'
   httpOptions={
     headers:new HttpHeaders({
       'Content-Type':'application/json',

@@ -23,7 +23,7 @@ export class SignUpComponent{
               private http: HttpClient   )
   {
     this.signUpForm = this.builder.group({
-      name:['', Validators.required],
+      username:['', Validators.required],
       address:['', Validators.required],
       age:['', Validators.required],
       role:['', Validators.required],
@@ -43,7 +43,7 @@ export class SignUpComponent{
     return this.signUpForm.controls['password'];
   }
   signUp(){
-    this.http.post<any>("http://localhost:3000/users",this.signUpForm.value)
+    this.http.post<any>("http://localhost:8080/api/v1/users/auth/sign-up",this.signUpForm.value)
       .subscribe(res=>{
         this.signUpForm.reset();
         this.router.navigate(['signIn'])

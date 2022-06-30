@@ -14,16 +14,10 @@
                 <mat-label>Email</mat-label>
                 <input
                   matInput
-                  placeholder="Correo Electronico"
+                  placeholder="Email"
                   formControlName="email"
                   required
                 >
-                <div *ngIf="email.invalid && (email.dirty || email!.touched)">
-                  <mat-error *ngIf="email.errors?.['email']"
-                  >You must enter a valid email.</mat-error>
-                  <mat-error *ngIf="email.errors?.['required']"
-                  >email required.</mat-error>
-                </div>
               </mat-form-field>
             </mat-grid-tile>
             <mat-grid-tile>
