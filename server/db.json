@@ -217,7 +217,6 @@
       "address": "Av. Universitaria 1349",
       "age": 18,
       "email": "diego@gmail.com",
-      "username": "DiegoA",
       "password": "diego123",
       "role": "lawyer",
       "id": 1
@@ -227,7 +226,6 @@
       "password": "$2a$10$uOSMhJtStBbyRBHhvPMY8OJnIAXRE5j8ehl2qduHWbWbDEigPm4kO",
       "name": "Roberto Chocano",
       "address": "Av. Universitaria 1349",
-      "username": "RobertoC",
       "age": 28,
       "role": "lawyer",
       "id": 2
@@ -237,7 +235,6 @@
       "password": "$2a$10$bkpKumUZKzHrz4QvYeRykeDps2DouBe/vXziMzw6SJqqCHknks5Ze",
       "name": "Diego Talledo",
       "address": "Av. Universitaria 1349",
-      "username": "DiegoT",
       "age": 28,
       "role": "client",
       "id": 3

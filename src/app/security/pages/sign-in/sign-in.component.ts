@@ -16,10 +16,11 @@ export class SignInComponent {
               public authService: SignService,
               public router: Router) {
     this.signInForm = this.builder.group({
-      email: ['', [Validators.email, Validators.required]],
-      password: ['', [Validators.email, Validators.minLength(6)]],
+      email: [''],
+      password: ['']
     });
   }
+
   get email(){
     return this.signInForm.controls['email'];
   }
