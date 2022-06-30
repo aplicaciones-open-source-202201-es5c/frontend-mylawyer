@@ -1,0 +1,13 @@
+img{
+  height: 470px;
+  width: 530px;
+}
+
+button{
+  margin: 3px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+}
