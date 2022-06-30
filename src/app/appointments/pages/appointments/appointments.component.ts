@@ -6,6 +6,8 @@ import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {NgForm} from "@angular/forms";
 import {Observable} from "rxjs";
+import {DialogCallComponent} from "../dialog-call/dialog-call.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-appointments',
@@ -25,7 +27,7 @@ export class AppointmentsComponent implements OnInit {
   @ViewChild('appointmentForm', {static: true})
   appointmentForm!: NgForm;
 
-  constructor(private appointmentsService: AppointmentsService) {
+  constructor(private appointmentsService: AppointmentsService, public dialog:MatDialog) {
     this.appointmentData = {} as Appointment;
     this.dataSource = new MatTableDataSource<any>();
   }
@@ -34,6 +36,13 @@ export class AppointmentsComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     //this.getAllAppointments();
     this.getAllAppointmentsForLawyer(this.getCurrentUserID());
+  }
+
+  joinCall(){
+    let dialogRef = this.dialog.open(DialogCallComponent, {
+      width: '600px',
+      height: '600px'
+    });
   }
 
   getAllAppointments(){
