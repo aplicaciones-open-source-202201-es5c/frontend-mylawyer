@@ -26,7 +26,7 @@ export class MyLawyerNavigationComponent {
       return currentUser.email;
     }else return null;
   }
-  getCurrentUserRole() {
+  getCurrentUserRole(){
     let currentUsertype=localStorage.getItem('currentUser');
     if(currentUsertype){
       let currentUser=(JSON.parse(currentUsertype));
@@ -41,7 +41,14 @@ export class MyLawyerNavigationComponent {
       return currentUser.name;
     }else return null;
   }
-
+  getCurrentToken(){
+    let getCurrentTokenString=localStorage.getItem('token');
+    if(getCurrentTokenString){
+      console.log(`current token: ${getCurrentTokenString}`);
+      let currentUser=(JSON.parse(getCurrentTokenString));
+      return currentUser.token;
+    }else return null;
+  }
   signOut() {
     localStorage.removeItem('currentUser');
     localStorage.removeItem('accessToken');

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {SignService} from "../../services/sign.service";
 import {Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-sign-in',
@@ -17,11 +16,13 @@ export class SignInComponent {
               public authService: SignService,
               public router: Router) {
     this.signInForm = this.builder.group({
-      email: [''],
-      password: ['']
+      email: ['', [Validators.email, Validators.required]],
+      password: ['', [Validators.email, Validators.minLength(6)]],
     });
   }
-
+  get email(){
+    return this.signInForm.controls['email'];
+  }
   get password(){
     return this.signInForm.controls['password'];
   }

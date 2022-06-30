@@ -34,10 +34,8 @@ export class SignService {
     return this.http.post(`${this.basePath}/signin`,user)
       .pipe(retry(2),catchError(this.handleError));
   }
-  signUp(user: User){
-    return this.http.post(`${this.basePath}/register`,user)
-      .pipe(retry(2),catchError(this.handleError));
-  }
+
+
 
 
 }

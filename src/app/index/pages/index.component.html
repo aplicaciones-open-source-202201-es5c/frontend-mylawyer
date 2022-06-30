@@ -6,30 +6,30 @@
       <mat-list-item class="item">
         <p class="fieldName">Nombre:</p>
         <mat-form-field class="field" appearance="fill" name="name" >
-          <input  matInput  value="{{getCurrentUserName()}}">
+          <input  matInput  value="{{LawyerData.firstName}}">
         </mat-form-field>
       </mat-list-item>
       <mat-list-item class="item">
         <p class="fieldName">Direccion:</p>
         <mat-form-field class="field" appearance="fill" name="address">
-          <input  matInput  value="{{getCurrentUserAddress()}}">
+          <input  matInput  value="{{LawyerData.address}}">
         </mat-form-field>
       </mat-list-item>
       <mat-list-item class="item">
         <p class="fieldName">Edad:</p>
         <mat-form-field class="field" appearance="fill">
-          <input  matInput  value="{{getCurrentUserAge()}}">
+          <input  matInput  value="{{LawyerData.age}}">
         </mat-form-field>
       </mat-list-item>
       <mat-list-item class="item">
         <p class="fieldName">Email:</p>
         <mat-form-field class="field" appearance="fill" name="email" >
-          <input  matInput  value="{{getCurrentUserEmail()}}">
+          <input  matInput  value="{{LawyerData.email}}">
         </mat-form-field>
       </mat-list-item>
       <mat-list-item class="item">
         <p class="fieldName">Tipo:</p>
-        <p>{{getCurrentUserRole()}}</p>
+        <p>{{LawyerData.email}}</p>
       </mat-list-item>
     </mat-list>
   </form>

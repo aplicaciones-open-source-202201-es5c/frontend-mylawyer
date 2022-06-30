@@ -42,8 +42,9 @@ export class SignUpComponent{
   get password(){
     return this.signUpForm.controls['password'];
   }
+
   signUp(){
-    this.http.post<any>("http://localhost:8080/api/v1/users/auth/sign-up",this.signUpForm.value)
+    this.http.post<any>("https://mylawyer.azurewebsites.net/api/v1/users/auth/sign-up",this.signUpForm.value)
       .subscribe(res=>{
         this.signUpForm.reset();
         this.router.navigate(['signIn'])
