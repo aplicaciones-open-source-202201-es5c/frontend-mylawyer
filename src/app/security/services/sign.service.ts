@@ -7,7 +7,7 @@ import {catchError, retry, throwError} from "rxjs";
   providedIn: 'root'
 })
 export class SignService {
-  basePath: String='http://localhost:8080/api/v1/users/auth'
+  basePath: String='http://localhost:3000/api/v1/auth'
   httpOptions={
     headers:new HttpHeaders({
       'Content-Type':'application/json',
@@ -34,8 +34,6 @@ export class SignService {
     return this.http.post(`${this.basePath}/signin`,user)
       .pipe(retry(2),catchError(this.handleError));
   }
-
-
 
 
 }

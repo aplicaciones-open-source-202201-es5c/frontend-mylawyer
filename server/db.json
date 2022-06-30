@@ -216,8 +216,8 @@
       "name": "Diego Alonso",
       "address": "Av. Universitaria 1349",
       "age": 18,
-      "email": "diego@gmail.com",
-      "password": "diego123",
+      "email": "abogadoD@gmail.com",
+      "password": "prueba123",
       "role": "lawyer",
       "id": 1
     },
@@ -238,6 +238,15 @@
       "age": 28,
       "role": "client",
       "id": 3
+    },
+    {
+      "name": "Alonso Sanchez",
+      "address": "Av. Universitaria 1349",
+      "age": 25,
+      "email": "clienteA@gmail.com",
+      "password": "prueba123",
+      "role": "client",
+      "id": 4
     }
   ]
 }

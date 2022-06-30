@@ -7,7 +7,7 @@ import {Lawyer} from "../model/lawyer";
   providedIn: 'root'
 })
 export class IndexService {
-  basePath = 'http://localhost:8080/api/v1/users';
+  basePath = 'https://my-json-server.typicode.com/DiegoTS18/datosMyLawyer/lawyers';
 
 
   httpOptions = {
