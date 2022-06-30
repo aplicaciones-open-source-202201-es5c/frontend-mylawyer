@@ -4,6 +4,10 @@ import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {AppointmentsService} from "../../services/appointments.service";
+import {MatDialog} from "@angular/material/dialog";
+import {DialogReprogramComponent} from "../dialog-reprogram/dialog-reprogram.component";
+import {DialogCallComponent} from "../dialog-call/dialog-call.component";
+
 
 @Component({
   selector: 'app-appointments-client',
@@ -15,13 +19,14 @@ export class AppointmentsClientComponent implements OnInit {
   appointmentData: Appointment;
   dataSource:MatTableDataSource<any>;
   displayedColumns: string[] = ['appointments'];
+  appointments:Appointment[]=[];
 
   @ViewChild(MatPaginator,{static: true})
   paginator!: MatPaginator;
   @ViewChild(MatSort)
   sort!: MatSort;
 
-  constructor(private appointmentsService: AppointmentsService) {
+  constructor(private appointmentsService: AppointmentsService, public dialog:MatDialog) {
     this.appointmentData = {} as Appointment;
     this.dataSource = new MatTableDataSource<any>();
   }
@@ -29,7 +34,40 @@ export class AppointmentsClientComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
     this.getAllAppointmentsForClient(this.getCurrentUserID());
+    this.getAllAppointments();
   }
+  
+  joinCall(){
+    let dialogRef = this.dialog.open(DialogCallComponent, {
+      width: '600px',
+      height: '600px'
+    });
+  }
+
+  openDialogReprogram(id:any){
+
+    let current = this.appointments.find((a)=>{return a.id === id;});
+    let dialogRef = this.dialog.open(DialogReprogramComponent, {
+      width: '400px',
+      height: '600px',
+      data:{appointment:current}
+    });
+
+    dialogRef.afterClosed().subscribe(result =>{
+      this.appointmentsService.update(id,result).subscribe((response:any) =>{
+        this.appointments = this.appointments.map((o:Appointment)=>{
+          if(o.id == response.id){
+            o = response;
+          }
+          return o;
+        })
+      });
+      this.getAllAppointmentsForClient(this.getCurrentUserID());
+    })
+
+
+  }
+
 
   getCurrentUserID() {
     let currentUserString=localStorage.getItem('currentUser');
@@ -41,7 +79,7 @@ export class AppointmentsClientComponent implements OnInit {
   }
   getAllAppointments(){
     this.appointmentsService.getAll().subscribe((response: any) =>{
-      this.dataSource.data = response;
+      this.appointments = response;
     })
 
   }
