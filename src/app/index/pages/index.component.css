@@ -2,10 +2,11 @@ h1{
 
   font-weight: bold;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0rem;
+  color: royalblue;
+  padding-top: 2.5rem;
   margin-bottom: 2rem;
 }
-
 .fieldName{
   width:5rem;
   position: relative;
@@ -15,7 +16,6 @@ h1{
   margin-left: 1rem;
   width: 30rem;
 }
-
 .list{
   float: right;
   position: relative;
@@ -30,10 +30,49 @@ h1{
 img{
   float:left;
   position: relative;
-  margin-left: 2rem;
+  margin-left: 13%;
+  margin-top: 2rem;
   width: 400px;
   height: 400px;
   overflow: hidden;
   border-radius: 50%;
 }
-
+mat-card{
+  margin: 3rem;
+  height: 19cm;
+}
+@media (max-width: 1229px) {
+  img{
+    float:left;
+    position: relative;
+    margin-left: 1%;
+    margin-top: 2rem;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 965px) {
+  img{
+    float:left;
+    position: relative;
+    margin-left: 20%;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .list{
+    float: left;
+    padding-left: 9rem;
+    position: relative;
+    width: 50%;
+  }
+  mat-card{
+    margin: 3rem;
+    height: 30cm;
+  }
+}
