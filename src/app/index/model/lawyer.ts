@@ -1,9 +1,10 @@
 export interface Lawyer{
   id:number,
-  name:string,
+  firstName:string,
+  lastName:string,
   address:string,
   age:number
   email:string,
   points:number,
-  img:string
+  img:string,
 }

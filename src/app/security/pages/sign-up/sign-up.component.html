@@ -1,0 +1,67 @@
+<div class="container">
+<mat-card>
+  <mat-card-title>Registrate ahora!</mat-card-title>
+  <form [formGroup]="signUpForm">
+    <div>
+      <div class="field_name">
+        <mat-label>Username </mat-label>
+        <mat-form-field style="display: block" appearance="outline">
+          <mat-label>Ingrese su usuario</mat-label>
+          <input formControlName="username" matInput required>
+        </mat-form-field>
+      </div>
+      <div class="field_email">
+        <mat-label>Ingrese su correo Electronico</mat-label>
+        <mat-form-field appearance="outline" >
+          <mat-label>Correo Electronico</mat-label>
+          <input matInput
+                 placeholder="Correo Electronico"
+                 formControlName="email"
+                 required>
+        </mat-form-field>
+      </div>
+      <div class="field_age">
+        <mat-label>Ingresa tu edad</mat-label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Ingresa tu edad</mat-label>
+          <input formControlName="age" type="number" matInput>
+        </mat-form-field>
+      </div>
+      <div class="field_address">
+        <mat-label>Direccion</mat-label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Ingrese su direccion</mat-label>
+          <textarea formControlName="address" matInput placeholder="Ex. 100 Main St"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="field_password">
+        <mat-label>Password</mat-label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Ingrese su contraseña</mat-label>
+          <input formControlName="password"
+            type="password"
+            matInput
+            placeholder="contraseña"
+            required
+          >
+        </mat-form-field>
+      </div>
+      <div class="field_type">
+        <mat-label>Tipo de usuario: </mat-label>
+        <mat-label>Ingrese "lawyer" para abogado o "client" para cliente </mat-label>
+        <mat-form-field style="display: block" appearance="outline">
+          <input formControlName="role" type="string" matInput>
+        </mat-form-field>
+
+      </div>
+    </div>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="signUp()">Registrarse</button>
+      <a href="/signIn">Tienes una cuenta?</a>
+    </mat-card-actions>
+  </form>
+
+</mat-card>
+</div>
+
+

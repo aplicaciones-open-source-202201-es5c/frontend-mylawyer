@@ -1,32 +1,38 @@
 <div>
-  <h1>Mi Perfil</h1>
-  <img src="{{LawyerData.img}}">
-  <form>
-    <mat-list class="list">
-      <mat-list-item class="item">
-        <p class="fieldName">Nombre:</p>
-        <mat-form-field class="field" appearance="fill" name="name" >
-          <input  matInput  value="{{LawyerData.name}}">
-        </mat-form-field>
-      </mat-list-item>
-      <mat-list-item class="item">
-        <p class="fieldName">Direccion:</p>
-        <mat-form-field class="field" appearance="fill" name="address">
-          <input  matInput  value="{{LawyerData.address}}">
-        </mat-form-field>
-      </mat-list-item>
-      <mat-list-item class="item">
-        <p class="fieldName">Edad:</p>
-        <mat-form-field class="field" appearance="fill">
-          <input  matInput  value="{{LawyerData.age}}">
-        </mat-form-field>
-      </mat-list-item>
-      <mat-list-item class="item">
-        <p class="fieldName">Email:</p>
-        <mat-form-field class="field" appearance="fill" name="email" >
-          <input  matInput  value="{{LawyerData.email}}">
-        </mat-form-field>
-      </mat-list-item>
-    </mat-list>
-  </form>
+  <mat-card>
+    <h1 >Mi Perfil</h1>
+    <img src="{{getCurrentUserImg()}}">
+    <form>
+      <mat-list class="list">
+        <mat-list-item class="item">
+          <p class="fieldName">Nombre:</p>
+          <mat-form-field class="field" appearance="outline" name="name" >
+            <input  matInput  value="{{getCurrentUserName()}}">
+          </mat-form-field>
+        </mat-list-item>
+        <mat-list-item class="item">
+          <p class="fieldName">Direccion:</p>
+          <mat-form-field class="field" appearance="outline" name="address">
+            <input  matInput  value="{{getCurrentUserAddress()}}">
+          </mat-form-field>
+        </mat-list-item>
+        <mat-list-item class="item">
+          <p class="fieldName">Edad:</p>
+          <mat-form-field class="field" appearance="outline">
+            <input  matInput  value="{{getCurrentUserAge()}}">
+          </mat-form-field>
+        </mat-list-item>
+        <mat-list-item class="item">
+          <p class="fieldName">Email:</p>
+          <mat-form-field class="field" appearance="outline" name="email" >
+            <input  matInput  value="{{getCurrentUserEmail()}}">
+          </mat-form-field>
+        </mat-list-item>
+        <mat-list-item class="item">
+          <p class="fieldName">Tipo:</p>
+          <p>{{getCurrentUserRole()}}</p>
+        </mat-list-item>
+      </mat-list>
+    </form>
+  </mat-card>
 </div>

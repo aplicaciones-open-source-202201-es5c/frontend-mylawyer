@@ -25,12 +25,16 @@ import { HttpClientModule} from "@angular/common/http";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {SearchLawyerComponent} from "./search-lawyer/pages/search-lawyer/search-lawyer.component";
 import {OrderByPipe} from "./orderby.pipe";
 import { AppointmentsClientComponent } from './appointments/pages/appointments-client/appointments-client.component';
 import {LawyersComponent} from "./clients/pages/lawyers/lawyers.component";
+import { SignInComponent } from './security/pages/sign-in/sign-in.component';
+import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -46,7 +50,9 @@ import {LawyersComponent} from "./clients/pages/lawyers/lawyers.component";
     SearchLawyerComponent,
     OrderByPipe,
     AppointmentsClientComponent,
-    LawyersComponent
+    LawyersComponent,
+    SignInComponent,
+    SignUpComponent
   ],
     imports: [
         BrowserModule,
@@ -68,7 +74,10 @@ import {LawyersComponent} from "./clients/pages/lawyers/lawyers.component";
         MatCardModule,
         MatFormFieldModule,
         FormsModule,
-        MatInputModule
+        MatInputModule,
+        MatGridListModule,
+        ReactiveFormsModule,
+        MatSelectModule
     ],
   providers: [],
   bootstrap: [AppComponent]

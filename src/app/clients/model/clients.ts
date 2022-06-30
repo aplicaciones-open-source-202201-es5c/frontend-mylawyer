@@ -6,7 +6,8 @@ export interface Clients{
   name:string,
   address: string,
   age:number,
-  email:string
+  email:string,
+  password:String
 }
 
 export interface AppointmentsClient extends Appointment{
