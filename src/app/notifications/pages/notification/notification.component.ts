@@ -32,7 +32,7 @@ export class NotificationComponent implements OnInit {
 
   ngOnInit(): void {
     //this.getAllNotifications();
-    this.getAllNotificationsForLawyer(3);
+    this.getAllNotificationsForLawyer(this.getCurrentUserID());
   }
   getAllNotifications(){
     this.notificationService.getAll().subscribe((response:any)=>{
@@ -45,7 +45,14 @@ export class NotificationComponent implements OnInit {
       this.dataSource.data = response;
     })
   }
-
+  getCurrentUserID() {
+    let currentUserString=localStorage.getItem('currentUser');
+    if(currentUserString){
+      console.log(`current user: ${currentUserString}`);
+      let currentUser=(JSON.parse(currentUserString));
+      return currentUser.id;
+    }else return null;
+  }
   deleteItem(id:number){
     this.notificationService.delete(id).subscribe(()=>{
       this.dataSource.data=this.dataSource.data.filter((o:Notification)=>{

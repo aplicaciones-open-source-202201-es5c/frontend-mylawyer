@@ -6,7 +6,7 @@
   <div class="login">
     <mat-card>
       <mat-card-title>Iniciar sesion</mat-card-title>
-      <form [formGroup]="signInForm" (ngSubmit)="signIn()">
+      <form [formGroup]="signInForm">
         <div>
           <mat-grid-list cols="1" rowHeight="50px" >
             <mat-grid-tile>
@@ -46,7 +46,9 @@
           </mat-grid-list>
         </div>
         <mat-card-actions>
-          <button mat-raised-button color="primary" type="submit" >Iniciar sesion</button>
+          <!--button mat-raised-button color="primary" type="submit" >Iniciar sesion</button-->
+          <button mat-raised-button color="primary" (click)="signInC()" >Iniciar sesion como cliente</button>
+          <button mat-raised-button color="primary" (click)="signInL()" >Iniciar sesion como abogado</button>
           <a href="#" (click)="signOut()">¿Olvidaste tu contraseña?</a>
           <mat-divider></mat-divider>
           <button mat-raised-button [routerLink]="'/signUp'">Crear cuenta nueva</button>

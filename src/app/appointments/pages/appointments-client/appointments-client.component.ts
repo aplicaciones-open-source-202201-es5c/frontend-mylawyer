@@ -28,9 +28,17 @@ export class AppointmentsClientComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
-    this.getAllAppointmentsForClient(2);
+    this.getAllAppointmentsForClient(this.getCurrentUserID());
   }
 
+  getCurrentUserID() {
+    let currentUserString=localStorage.getItem('currentUser');
+    if(currentUserString){
+      console.log(`current user: ${currentUserString}`);
+      let currentUser=(JSON.parse(currentUserString));
+      return currentUser.id;
+    }else return null;
+  }
   getAllAppointments(){
     this.appointmentsService.getAll().subscribe((response: any) =>{
       this.dataSource.data = response;

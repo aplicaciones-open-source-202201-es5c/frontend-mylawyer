@@ -6,5 +6,5 @@ export interface Lawyer{
   age:number
   email:string,
   points:number,
-  img:string
+  img:string,
 }

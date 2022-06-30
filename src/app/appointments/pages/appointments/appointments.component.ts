@@ -33,7 +33,7 @@ export class AppointmentsComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
     //this.getAllAppointments();
-    this.getAllAppointmentsForLawyer(3);
+    this.getAllAppointmentsForLawyer(this.getCurrentUserID());
   }
 
   getAllAppointments(){
@@ -41,6 +41,15 @@ export class AppointmentsComponent implements OnInit {
       this.dataSource.data = response;
     })
 
+  }
+
+  getCurrentUserID() {
+    let currentUserString=localStorage.getItem('currentUser');
+    if(currentUserString){
+      console.log(`current user: ${currentUserString}`);
+      let currentUser=(JSON.parse(currentUserString));
+      return currentUser.id;
+    }else return null;
   }
 
   getAllAppointmentsForLawyer(id:any){

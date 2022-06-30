@@ -48,6 +48,42 @@ export class SignInComponent implements OnInit{
       alert("something went wrong")
     })
   }
+  signInC(){
+    this._http.get<any>("https://my-json-server.typicode.com/DiegoTS18/datosMyLawyer/clients").subscribe(res=>{
+      const user=res.find((a:any)=>{
+        return a.email===this.signInForm.value.email && a.password === this.signInForm.value.password
+      });
+      if(user){
+        localStorage.setItem('currentUser',JSON.stringify(user));
+        this.signInForm.reset();
+        this.router.navigate(['profile'])
+        this.signInForm.reset();
+        this.router.navigate(['profile'])
+      }else {
+        alert("user not found")
+      }
+    },err=>{
+      alert("something went wrong")
+    })
+  }
+  signInL(){
+    this._http.get<any>("https://my-json-server.typicode.com/DiegoTS18/datosMyLawyer/lawyers").subscribe(res=>{
+      const user=res.find((a:any)=>{
+        return a.email===this.signInForm.value.email && a.password === this.signInForm.value.password
+      });
+      if(user){
+        localStorage.setItem('currentUser',JSON.stringify(user));
+        this.signInForm.reset();
+        this.router.navigate(['profile'])
+        this.signInForm.reset();
+        this.router.navigate(['profile'])
+      }else {
+        alert("user not found")
+      }
+    },err=>{
+      alert("something went wrong")
+    })
+  }
   signIn_(){
     this.authService.signIn(this.signInForm.value).subscribe((response:any)=>{
       alert(response.user)

@@ -90,5 +90,13 @@ export class IndexComponent implements OnInit {
       return currentUser.name;
     }else return null;
   }
+  getCurrentUserImg() {
+    let currentUserString=localStorage.getItem('currentUser');
+    if(currentUserString){
+      console.log(`current user: ${currentUserString}`);
+      let currentUser=(JSON.parse(currentUserString));
+      return currentUser.img;
+    }else return null;
+  }
 
 }
